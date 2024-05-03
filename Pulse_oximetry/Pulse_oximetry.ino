@@ -2,6 +2,7 @@
 #include "MAX30105.h"
 
 MAX30105 particleSensor;
+int val = 0;
 
 void setup() {
 	Serial.begin(9600);
