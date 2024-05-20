@@ -202,9 +202,9 @@ double getSpO2(long REDreading, long IRreading) {
   thirdByteIR = averageIR;
 
   // Check if recorded reading is local maxima or minima. Save these values into array
-  // to approximate AC and DC component. AC component will be the distance of maximum peak
-  // and minimum peak averaged over 10 successive readings. DC component will be the value
-  // of minimum peak averaged over 10 successive readings. See the literature for more details.
+  // to approximate AC and DC component. AC component will be the distance of the maximum 
+  // and minimum averaged over 10 successive readings. DC component will be the value
+  // of minimum averaged over 10 successive readings. See the literature for more details.
   if ((secondByteRED > firstByteRED) && (secondByteRED > thirdByteRED)) {
     long REDpeak = secondByteRED;
     sumREDPeaks += (REDpeak - REDpeaks[lastIndexSpo2REDmax]);
